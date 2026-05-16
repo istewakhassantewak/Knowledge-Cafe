@@ -3,7 +3,7 @@ import { FaRegBookmark } from 'react-icons/fa';
 
 const Blog = ({ blog, handleAddToBookmark }) => {
 
-    const { id, cover_img, author, author_img, title, posted_date, reading_time, hashtags } = blog
+    const { cover_img, author, author_img, title, posted_date, reading_time, hashtags } = blog
     return (
         <div className='mb-20'>
             <img className='w-full mb-8' src={cover_img} alt={`Cover picture of the ${title}`} />
@@ -17,7 +17,7 @@ const Blog = ({ blog, handleAddToBookmark }) => {
                 </div>
                 <div>
                     <span>{reading_time} min read</span>
-                    <button onClick={handleAddToBookmark} className='ml-2 text-2xl text-red-400'><FaRegBookmark /></button>
+                    <button onClick={() => handleAddToBookmark(blog)} className='ml-2 text-2xl text-red-400'><FaRegBookmark /></button>
                 </div>
             </div>
             <h2 className="text-4xl">{title}</h2>
@@ -30,7 +30,8 @@ const Blog = ({ blog, handleAddToBookmark }) => {
     );
 };
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmark: PropTypes.func.isRequired
 }
 
 export default Blog;
