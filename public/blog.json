@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "cover_img": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "title": "Mastering JavaScript ES6 Features",
+    "author_img": "https://randomuser.me/api/portraits/men/32.jpg",
+    "posted_date": "2026-05-10",
+    "reading_time": 8,
+    "hashtags": ["#javascript", "#webdev", "#frontend"]
+  },
+  {
+    "id": 2,
+    "cover_img": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "title": "Building Responsive Websites with Tailwind CSS",
+    "author_img": "https://randomuser.me/api/portraits/women/44.jpg",
+    "posted_date": "2026-05-11",
+    "reading_time": 6,
+    "hashtags": ["#tailwindcss", "#css", "#responsive"]
+  },
+  {
+    "id": 3,
+    "cover_img": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    "title": "Getting Started with React Hooks",
+    "author_img": "https://randomuser.me/api/portraits/men/55.jpg",
+    "posted_date": "2026-05-12",
+    "reading_time": 10,
+    "hashtags": ["#react", "#hooks", "#javascript"]
+  },
+  {
+    "id": 4,
+    "cover_img": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "title": "Top VS Code Extensions for Developers",
+    "author_img": "https://randomuser.me/api/portraits/women/65.jpg",
+    "posted_date": "2026-05-13",
+    "reading_time": 5,
+    "hashtags": ["#vscode", "#productivity", "#coding"]
+  },
+  {
+    "id": 5,
+    "cover_img": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    "title": "Understanding Async Await in JavaScript",
+    "author_img": "https://randomuser.me/api/portraits/men/77.jpg",
+    "posted_date": "2026-05-14",
+    "reading_time": 7,
+    "hashtags": ["#async", "#javascript", "#programming"]
+  }
+]
