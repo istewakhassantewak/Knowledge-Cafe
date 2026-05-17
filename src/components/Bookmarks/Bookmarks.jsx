@@ -3,15 +3,17 @@ import Bookmark from '../Bookmark/Bookmark';
 
 const Bookmarks = ({ bookmarks, readingTime }) => {
     return (
-        <div className="md:w-1/3 bg-gray-300 ml-4 mt-2 pt-4">
-            <div>
-                <h3 className="text-4xl">Reading Time: {readingTime}</h3>
+        <div className="md:w-1/3 bg-gray-300  md:ml-4 mt-5 pt-4 rounded-4xl pb-4">
+            <div className='bg-green-200 p-10 rounded-4xl m-4'>
+                <h3 className="lg:text-3xl font-bold xl:text-4xl text-center">Reading Time: {readingTime}</h3>
             </div>
-            <h2 className="text-3xl text-center">Bookmarked Blogs: {bookmarks.length}
-                {
-                    bookmarks.map(bookmark => <Bookmark key={`a${bookmark.id}`} bookmark={bookmark}></Bookmark>)
-                }
-            </h2>
+            <div>
+                <h2 className="text-3xl text-center font-bold">Bookmarked Blogs: {bookmarks.length}
+                    {
+                        bookmarks.map((bookmark, index) => <Bookmark key={`${index}${bookmark.id}`} bookmark={bookmark}></Bookmark>)
+                    }
+                </h2>
+            </div>
         </div>
     );
 };

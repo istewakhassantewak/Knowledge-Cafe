@@ -3,30 +3,30 @@ import { FaRegBookmark } from 'react-icons/fa';
 
 const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
 
-    const { cover_img, author, author_img, title, posted_date, reading_time, hashtags } = blog
+    const { id, cover_img, author, author_img, title, posted_date, reading_time, hashtags } = blog
     return (
-        <div className='mb-20  space-y-4'>
-            <img className='w-full mb-8' src={cover_img} alt={`Cover picture of the ${title}`} />
+        <div className='mb-14  space-y-4 bg-fuchsia-200 p-6 rounded-4xl'>
+            <img className='w-full mb-8 rounded-4xl' src={cover_img} alt={`Cover picture of the ${title}`} />
             <div className='flex justify-between mb-4'>
                 <div className='flex'>
                     <img className='w-14 rounded-4xl' src={author_img} alt="" />
                     <div className='ml-6'>
-                        <h3 className='text-2xl'>{author}</h3>
+                        <h3 className='text-2xl font-bold'>{author}</h3>
                         <p>{posted_date}</p>
                     </div>
                 </div>
-                <div>
+                <div className='flex items-center gap-2.5'>
                     <span>{reading_time} min read</span>
-                    <button onClick={() => handleAddToBookmark(blog)} className='ml-2 text-2xl text-red-400'><FaRegBookmark /></button>
+                    <button onClick={() => handleAddToBookmark(blog)} className='ml-2 text-2xl text-red-400 font-bold bookmarkbtn'><FaRegBookmark /></button>
                 </div>
             </div>
-            <h2 className="text-4xl">{title}</h2>
+            <h2 className="text-4xl font-extrabold">{title}</h2>
             <p>
                 {
-                    hashtags.map((hash, index) => <span key={index}><a href="">{hash}</a></span>)
+                    hashtags.map((hash, index) => <span className='mr-2' key={index}><a href="">{hash}</a></span>)
                 }
             </p>
-            <button onClick={() => handleMarkAsRead(reading_time)} className='text-purple-800 font-bold underline'>Mark As Read</button>
+            <button onClick={() => handleMarkAsRead(id, reading_time)} className='text-purple-800 font-bold underline'>Mark As Read</button>
         </div>
     );
 };
